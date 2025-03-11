@@ -18,7 +18,7 @@ function App() {
         <Route element={<DefaultLayout />} >
           <Route index element={<HomePage />} />
           <Route path="/movie" element={<ListaFilm />} />
-          <Route path=":id" element={<DetailMovie />} />
+          <Route path="/movie/:id" element={<DetailMovie />} />
           {/* rotta del 404 per rotte non previste */}
           <Route path="*" element={<PaginaErrore />} />
           <Route path="/movie/0" element={<PaginaErrore />} />

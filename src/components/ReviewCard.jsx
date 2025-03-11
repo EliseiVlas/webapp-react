@@ -1,8 +1,8 @@
 const ReviewCard = () => {
     return (
-        <div className="card mb-4">
-            <div className="card-body">
-                <p className="card-text">
+        <div className="review">
+            <div className="">
+                <p className="">
                     testo della recensione
                 </p>
                 <strong>

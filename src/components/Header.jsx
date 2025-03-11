@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
     return (
         <header>
-            <h1>Movie WebApp</h1>
+            <Link to={"/movie"}><h1>Movie WebApp</h1></Link>
         </header>
     );
 }

@@ -7,7 +7,6 @@
 /* modifica main */
 main{
   padding: 20px 100px;
-  
   background-size: 100%;
   background-image: url("https://img.freepik.com/foto-premium/immagine-di-bobine-di-film-d-epoca-su-uno-sfondo-scuro-testurato-che-evoca-la-nostalgia-per-il-cinema-classico-e-la-produzione-cinematografica_490636-17474.jpg");
 }
@@ -15,6 +14,8 @@ main{
 main h1{
   padding-bottom: 5px;
   color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
 }
 
 /* modifica header */
@@ -40,23 +41,33 @@ header h1:hover {
 }
 
 /* modifica home page */
-.home{
+.home, .home1{
   background-image: url("https://img.freepik.com/vettori-gratuito/sfondo-a-striscia-di-film-retro-in-stile-3d-con-spazio-per-il-testo_1017-52848.jpg?semt=ais_hybrid");
   background-size: 100%;
   font-size: 20px;
   height: 80vh;
+  color: white;
+}
+.home1 a{
+background-color: rgb(13, 98, 177);
+padding: 20px;
+border-radius: 5px;
+color: white;
 }
 .home h1{
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
 }
+.home1 p{
+  margin-bottom: 40px;
+}
 
 /* modifica lista film */
 .lista{
   display: flex;
-  justify-content: space-between;
-  
+  justify-content: center;
+  gap: 5%;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -75,7 +86,7 @@ header h1:hover {
   background-color: white;
 }
 .card .img{
-  width: 100%;
+  width: 70%;
 }
 .card h3{
   background-color: rgb(0, 81, 255);
@@ -159,6 +170,14 @@ a{
   background-image: url("https://img.freepik.com/foto-premium/immagine-di-bobine-di-film-d-epoca-su-uno-sfondo-scuro-testurato-che-evoca-la-nostalgia-per-il-cinema-classico-e-la-produzione-cinematografica_490636-17474.jpg");
   background-size: 100%;
 }
+.detail h2, .stars{
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
 .detail img{
   width: 15%;
 }
@@ -204,4 +223,16 @@ a{
   padding: 5px;
   background-color: rgb(0, 110, 255);
   color: white;
+}
+/* modifica voto star */
+.star {
+  color: rgb(255, 230, 0);
+  font-size: 18px;
+  margin: 2px;
+}
+
+.star2 {
+  color: #444;
+  font-size: 18px;
+  margin: 2px;
 }

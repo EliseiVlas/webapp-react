@@ -21,6 +21,7 @@ function App() {
           <Route path="/movie/:id" element={<DetailMovie />} />
           {/* rotta del 404 per rotte non previste */}
           <Route path="*" element={<PaginaErrore />} />
+          <Route path="/movie/*" element={<PaginaErrore />} />
           <Route path="/movie/0" element={<PaginaErrore />} />
         </Route>
       </Routes>

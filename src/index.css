@@ -7,9 +7,14 @@
 /* modifica main */
 main{
   padding: 20px 100px;
+  
+  background-size: 100%;
+  background-image: url("https://img.freepik.com/foto-premium/immagine-di-bobine-di-film-d-epoca-su-uno-sfondo-scuro-testurato-che-evoca-la-nostalgia-per-il-cinema-classico-e-la-produzione-cinematografica_490636-17474.jpg");
 }
+
 main h1{
   padding-bottom: 5px;
+  color: white;
 }
 
 /* modifica header */
@@ -36,7 +41,7 @@ header h1:hover {
 
 /* modifica home page */
 .home{
-  background-image: url("https://static1.moviewebimages.com/wordpress/wp-content/uploads/2024/08/netflix-logo.jpeg");
+  background-image: url("https://img.freepik.com/vettori-gratuito/sfondo-a-striscia-di-film-retro-in-stile-3d-con-spazio-per-il-testo_1017-52848.jpg?semt=ais_hybrid");
   background-size: 100%;
   font-size: 20px;
   height: 80vh;
@@ -58,7 +63,7 @@ header h1:hover {
 
 /* modifica CREAZIONE CARD */
 .card{
-  width: 23%;
+  width: 30%;
   border: 2px solid black;
   display: flex;
   flex-direction: column;
@@ -67,6 +72,7 @@ header h1:hover {
   text-align: center;
   padding: 5px;
   margin-top: 20px;
+  background-color: white;
 }
 .card .img{
   width: 100%;
@@ -132,6 +138,7 @@ a{
 /* modifica detaglio review */
 .review{
   border: 2px solid rgb(151, 151, 151);
+ background-color: white;
   margin: 10px 0px;
 }
 .review div{
@@ -143,11 +150,14 @@ a{
 .stars{
   display: flex;
   justify-content: space-between;
+  color: white;
 }
 
 /* modifica detaglio in parte */
 .detail{
   padding: 20px 100px;
+  background-image: url("https://img.freepik.com/foto-premium/immagine-di-bobine-di-film-d-epoca-su-uno-sfondo-scuro-testurato-che-evoca-la-nostalgia-per-il-cinema-classico-e-la-produzione-cinematografica_490636-17474.jpg");
+  background-size: 100%;
 }
 .detail img{
   width: 15%;
@@ -157,6 +167,7 @@ a{
   padding: 10px;
   border: 2px solid rgb(151, 151, 151);
   margin-bottom: 20px;
+  background-color: white;
 }
 .card-review div{
   padding: 20px;
@@ -170,6 +181,7 @@ a{
   gap: 10px;
   padding: 20px;
   border: 2px solid rgb(151, 151, 151);
+  background-color: white;
 }
 .title-form{
   padding: 10px 20px;

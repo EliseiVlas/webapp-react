@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const FormCard = () => {
     return (
-        <div>
+        <div className="form-card">
             <h4 className="title-form">Add your review</h4>
             <form id='formarticolo' action="#" >
                 {/* valore nome piatto */}

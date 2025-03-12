@@ -1,19 +1,20 @@
-const MovieCard = () => {
+const MovieCard = (props) => {
+    const {id, title, director, abstract, image } = props.movieProp
     return (
     <div className="">
         <div className="card-review">
             <img className=""
-                src="http://localhost:4000/img/movies_img/inception.jpg"
-                alt="descrizione img" />
+                src={image}
+                alt={title} />
             <div>
-                <h1>Titolo libro</h1>
+                <h1>{title}</h1>
                 <h3 className="">
                     <i>
-                        By Nome autore
+                    {director}
                     </i>
                 </h3>
                 <p>
-                    Abscract lorem ipsm dolor sit amet...
+                {abstract}
                 </p>
             </div>
         </div>

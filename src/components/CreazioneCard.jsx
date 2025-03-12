@@ -1,22 +1,24 @@
 import { Link } from "react-router-dom"
 
-export default function CreazioneCard() {
+export default function CreazioneCard(props) {
+
+    const {id, title, director, abstract, image } = props.movieProp
     return (
     <div className="card">
         <img className="img"
-            src="http://localhost:4000/img/movies_img/inception.jpg"
-            alt="descrizione img" />
+            src={image}
+            alt={title} />
         <div className="card-body">
             <h2 className="card-title">
-                Titolo del libro
+                {title}
             </h2>
             <address><i>
-                By nome autore
+                {director}
             </i></address>
             <p className="card-text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto labore ad sapiente animi incidunt. Sit nihil sed, aliquam rerum ipsam illo optio impedit aperiam molestiae.
+                {abstract}
             </p>
-            <Link to={"/movie/2"}><h3>See more</h3></Link>
+            <Link to={`/movie/${id}`}><h3>See more</h3></Link>
         </div>
     </div>
     );

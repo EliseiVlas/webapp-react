@@ -58,9 +58,17 @@ color: white;
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
   text-decoration: none;
+  margin-bottom: 20px;
 }
 .home1 p{
   margin-bottom: 40px;
+}
+.home a{
+  background-color: rgb(255, 71, 30);
+  color: white;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 4px;
 }
 
 /* modifica lista film */

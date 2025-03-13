@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+
 import axios from "axios";
 import { useState, useEffect } from 'react';
 // import della parte di ritorno parametro rotta FE
@@ -28,6 +31,7 @@ export default function DetaglioFilm() {
                 if (err.status === 404) redirect("/404")
                 })
     }
+    
 
     useEffect(fetchMovie, []);
     
@@ -36,6 +40,21 @@ export default function DetaglioFilm() {
             review => <ReviewCard key={review.id} reviewProp={review} />
         )
     }
+    const renderReviews1 = () => {
+        if (!movie.reviews || movie.reviews.length === 0) return <span>Nessuna recensione</span>;
+        const total = movie.reviews.reduce((sum, review) => sum + review.vote, 0);
+        const average = total / movie.reviews.length;
+        const media = average.toFixed(1); // Arrotonda a una cifra decimale
+
+        return  <span>
+                    {media >= 1 ? <FontAwesomeIcon className="star" icon={faStar} /> : <FontAwesomeIcon className="star2" icon={faStar} />}
+                    {media >= 1.5 ? <FontAwesomeIcon className="star" icon={faStar} /> : <FontAwesomeIcon className="star2" icon={faStar} />}
+                    {media >= 2.5 ? <FontAwesomeIcon className="star" icon={faStar} /> : <FontAwesomeIcon className="star2" icon={faStar} />}
+                    {media > 3.5 ? <FontAwesomeIcon className="star" icon={faStar} /> : <FontAwesomeIcon className="star2" icon={faStar} />}
+                    {media > 4.5 ? <FontAwesomeIcon className="star" icon={faStar} /> : <FontAwesomeIcon className="star2" icon={faStar} />}
+                </span>        
+    }
+
 
     return (
         <div className="detail">
@@ -44,13 +63,13 @@ export default function DetaglioFilm() {
  
              <section id="reviews">
                  <div className="stars">
-                     <h4>Our community reviews</h4>
-                     <span>VOTO GENERALE:</span>
+                     <h1>Our community reviews</h1>
+                     <span>VOTO GENERALE: {renderReviews1()}</span>
                  </div>
                  {/* Reviews qui */}
                  {renderReviews()}
              </section>
-             <FormCard />
+             <FormCard movie_id={movie.id} realoadReview={fetchMovie}/>
         </div>
     );
 }

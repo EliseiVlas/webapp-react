@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import DetailMovie from "./pages/DetailMovie";
 import PaginaErrore from "./pages/PaginaErrore";
 import ListaFilm from "./pages/ListaFilm";
+import CreateMoviePage from './pages/CreateMoviePage';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Route element={<DefaultLayout />} >
           <Route index element={<HomePage />} />
           <Route path="/movie" element={<ListaFilm />} />
+          <Route path="/movie/create" element={<CreateMoviePage />} />
           <Route path="/movie/:id" element={<DetailMovie />} />
           {/* rotta del 404 per rotte non previste */}
           <Route path="*" element={<PaginaErrore />} />

@@ -6,6 +6,7 @@ export default function HomePage() {
             <h1>Home page della nostra webapp dei film</h1>
 
             <Link to={"/movie"}>Entra nella pagina dei Film</Link>
+            <Link to="/movie/create">Add Movie</Link>
         </div>
     );
 }
